@@ -5,6 +5,6 @@ export default defineConfig({
   themeConfig: {
     name: 'slickcss',
   },
-  
+  base: '/slickcss/',
   publicPath: '/slickcss/'
 });
