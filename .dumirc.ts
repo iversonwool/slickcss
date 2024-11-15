@@ -6,5 +6,5 @@ export default defineConfig({
     name: 'slickcss',
   },
   
-  publicPath: '/slickcss'
+  publicPath: '/slickcss/'
 });
