@@ -35,4 +35,4 @@ jobs:
         with:
           branch: build # 打包的内容放到build分支下
           folder: docs-dist
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
+          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
