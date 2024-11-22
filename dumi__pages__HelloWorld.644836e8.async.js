@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkslickcss=self.webpackChunkslickcss||[]).push([[218],{63792:function(u,s,l){l.r(s);var e=l(67294),c=l(85893),n=function(){return(0,c.jsx)("div",{children:"HelloWorld"})};s.default=n}}]);
