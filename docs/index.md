@@ -1,7 +1,7 @@
 ---
 hero:
-  title: library
-  description: css magic
+  title: CSS Magic
+  description: some css tricks
   actions:
     - text: Hello
       link: /

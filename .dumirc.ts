@@ -6,5 +6,6 @@ export default defineConfig({
     name: 'slickcss',
   },
   base: '/slickcss/',
-  publicPath: '/slickcss/'
+  publicPath: '/slickcss/',
+  // mako:{}
 });

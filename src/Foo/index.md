@@ -1,4 +1,13 @@
+---
+title: 常见效果
+# group:
+#   path: /effects/foo
+#   title: 常见效果
+---
+
 # Foo
+
+
 
 This is an example component.
 
