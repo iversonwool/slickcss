@@ -13,7 +13,7 @@ title: 轮播图效果
 import { Swiper, RotateSwiper } from 'slickcss';
 
 export default () => <>
-  
+  <Swiper />
   <RotateSwiper />
 </>
 ```
