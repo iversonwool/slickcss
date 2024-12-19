@@ -22,6 +22,88 @@
       height: 100%;
     }
   }
+} 
+
+@item_diameter: 300px;
+@images: 6;
+@delta_deg: (360deg / @images);
+@r: (@item_diameter / 2);
+@R: (@r / sin((@delta_deg / 2)));
+@rotate_diameter: @R * 2;
+@origin-y: @r + @R;
+.rotate_bg {
+  height: 500px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+
+  .rotate_container {
+    width: @item_diameter;
+    height: @item_diameter;
+    border-radius: 50%;
+    margin: 0 auto;
+    outline: 4px solid white;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    .rotate_circle {
+      width: @rotate_diameter;
+      height: @rotate_diameter;
+      border-radius: 50%;
+      background-color: blue;
+      flex-shrink: 0;
+      margin-top: @r;
+      position: relative;
+
+      @delta: (1 / @images) * 100%;
+
+
+     
+     
+
+      @keyframes rotate_infinite {
+        // TODO:换sass 循环写；
+        // 100% {
+        //   transform: rotate(-360deg);
+        // }
+        // each(range(6), {});
+        // each(range(@images), {
+        //   @name: @delta * @{index}
+        //   @name: {
+          
+        //   }
+        // })
+        6.67%, 16.67% { transform: rotate(-60deg); }
+        23.33%, 33.33% { transform: rotate(-120deg); }
+        40%, 50% { transform: rotate(-180deg); }
+        56.67%, 66.67% { transform: rotate(-240deg); }
+        73.33%, 83.33% { transform: rotate(-300deg); }
+        90%, 100% { transform: rotate(-360deg); }
+      }
+      animation: rotate_infinite 9s infinite;
+
+      .rotate_item {
+        width: @item_diameter;
+        height: @item_diameter;
+        border-radius: 50%;
+        // display: block;
+        position: absolute;
+        left: 50%;
+        margin-left: -@r;
+        top: -@r;
+        transform-origin: center @origin-y;
+
+        
+
+        each(range(@images), {
+          &:nth-child(@{index}) {
+            transform: rotate(@delta_deg * (@value - 1));
+          }
+        });
+      }
+    }
+  }
 }
 
 
@@ -39,3 +121,14 @@
     transition: all 0.25s ease;
   }
 }
+// 竟然不支持
+// .mask(@n) when (@n =< 100%) {
+//   @{n} {
+    
+//   }
+//   .mask(@n + 1);
+// }
+
+// @keyframes maskMove {
+//   .mask(0%);
+// }

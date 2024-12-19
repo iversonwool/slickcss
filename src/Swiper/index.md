@@ -9,10 +9,11 @@ title: 轮播图效果
 
 
 
-This is an example component.
-
 ```jsx
-import { Swiper } from 'slickcss';
+import { Swiper, RotateSwiper } from 'slickcss';
 
-export default () => <Swiper title="Hello dumi!" />
+export default () => <>
+  
+  <RotateSwiper />
+</>
 ```

@@ -8,7 +8,7 @@ This is Homepage.<br />
 
 
 ```jsx
-import { Foo } from 'slickcss';
+import { FLIP } from 'slickcss';
 
-export default () => <Foo title="Hello dumi!" />
+export default () => <FLIP title="Hello dumi!" />
 ```
